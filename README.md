@@ -8,9 +8,9 @@
 
 # How to own me ?
 
-  1、npm install -s @zinliao/handybox
+> 1、npm install -s @zinliao/handybox
 
-  2、let handybox = require('@zinliao/handybox');
+> 2、let handybox = require('@zinliao/handybox');
 
 # Do I have documentation ?
 
