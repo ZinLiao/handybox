@@ -5,6 +5,7 @@
 # What function I have ?
 
   1、Array | String | DOM | Time
+  
   2、Support Chained call
 
 # How to own me ?
