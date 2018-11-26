@@ -5,7 +5,7 @@
 # What function I have ?
 
   1、Array | String | DOM | Time
-  
+
   2、Support Chained call
 
 # How to own me ?
@@ -20,7 +20,9 @@
 
 # Do I have documentation ?
 
-### Array
+Online: [Github - handybox](https://github.com/ZinLeo/handybox)
+
+## Array
 
 | API Name | Default Params | optional(default) |
 | -------- | ------ | ----- |
@@ -49,4 +51,20 @@ let a = [1];
 a.pushAndShift(2);
 // [2,3]
 a.pushAndShift(3, 2);
+```
+
+## String
+
+| API Name | Default Params | optional(default) |
+| -------- | ------ | ----- |
+| upperFirst | - | - |
+
+* upperFirst
+```
+let handybox = require('../index');
+
+let str1 = 'hello world';
+
+// Hello world
+str1.upperFirst();
 ```
