@@ -2,11 +2,9 @@
 
   I am an ECMAScript toolbox like handybox.
 
-# What function I have ?
+# What type of function I have ?
 
-  1、Array | String | DOM | Time
-
-  2、Support Chained call
+  Arrays, String, Time methods that are not Native
 
 # How to own me ?
 
@@ -22,14 +20,19 @@
 
 Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
-## Array
+* [zArray](#zArray)
+* [zString](#zString)
+* [zTime](#zTime)
 
-| API Name | Default Params | optional(default) |
-| -------- | ------ | ----- |
-| deduplication | arr | keepEmpty(false) |
-| pushAndShift | item | max(0)|
+## zArray
+
+| API Name | Default Params | optional(default) | Chained call | 
+| -------- | ------ | ----- | ----- |
+| deduplication | arr | keepEmpty(false) | √
+| pushAndShift | item | max(0)| √
 
 * deduplication
+
 ```
 let handybox = require('../index');
 
@@ -42,6 +45,7 @@ a.deduplication(true);
 ```
 
 * pushAndShift
+
 ```
 let handybox = require('../index');
 
@@ -53,13 +57,14 @@ a.pushAndShift(2);
 a.pushAndShift(3, 2);
 ```
 
-## String
+## zString
 
-| API Name | Default Params | optional(default) |
-| -------- | ------ | ----- |
-| upperFirst | - | - |
+| API Name | Default Params | Optional Params(default) | Chained call | 
+| -------- | ------ | ----- | ----- |
+| upperFirst | - | - | × |
 
 * upperFirst
+
 ```
 let handybox = require('../index');
 
@@ -67,4 +72,32 @@ let str1 = 'hello world';
 
 // Hello world
 str1.upperFirst();
+```
+
+## zTime
+
+| API Name | Default Params | Optional Params(default) | Chained call | 
+| -------- | ------ | ----- | ----- |
+| getMyTime | - | format(null)<br>timestamp(null)<br>area(EN) | × |
+
+### format 
+
+| Input | Output | 
+| ----- | ----- | 
+| YYYY`|`yyyy`|`year`|`年 | 2018
+| MM`|`month`|`月 | 12 |
+| DD`|`date`|`日 | 25 |
+| HH`|`hour`|`时 | 09 |
+| mm`|`minute`|`分 | 10 |
+| ss`|`second`|`秒 | 50 |
+| ms`|`millisecond`|`毫秒 | 247 |
+| day | EN: Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday <br> CN: 日, 一, 二, 三, 四, 五, 六 |
+
+```
+let zTime = require('../index')['zTime'];
+
+let time1 = zTime.getMyTime('YYYY-MM-DD HH:mm:ss 星期day', null, 'CN');
+
+// 2018-11-26 21:56:46 星期一
+console.log(time1);
 ```

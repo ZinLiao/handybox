@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-26 14:33:18 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2018-11-26 16:38:09
+ * @Last Modified time: 2018-11-26 21:09:00
  */
 
 'use strict';
@@ -26,8 +26,8 @@ Array.prototype.deduplication = function (keepEmpty = false) {
 /**
  * insert into item, or remove first item if you set the arrya max length
  * 
- * @param {Any} item waitting to insert into array
- * @param {Number} max you want to set the array max length, default 0 and can not remove first item
+ * @param {Any} item waiting to insert into array
+ * @param {Number} max you want to set the max length of array, default 0 and can not remove first item
  */
 Array.prototype.pushAndShift = function (item, max = 0) {
   if (!Array.isArray(this)) {
