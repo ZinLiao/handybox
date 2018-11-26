@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-26 14:22:04 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2018-11-26 14:56:47
+ * @Last Modified time: 2018-11-26 16:07:17
  */
 
 'use strict';
@@ -12,4 +12,4 @@ exports.hello = () => {
 }
 
 // zArray 相关
-exports.zArray = require('./zArray/index');
+require('./zArray/index');
