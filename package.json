@@ -1,0 +1,16 @@
+{
+  "name": "@zinliao/handybox",
+  "version": "0.0.1",
+  "description": "A ECMAScript toolbox like handybox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ECMAScript",
+    "toolbox",
+    "handybox"
+  ],
+  "author": "Zin Liao",
+  "license": "ISC"
+}
