@@ -28,7 +28,7 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
 | API Name | Default Params | optional(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
-| deduplication | arr | keepEmpty(false) | √
+| deduplication | arr | keepEmpty(false) | √
 | pushAndShift | item | max(0)| √
 
 * deduplication
@@ -84,9 +84,9 @@ str1.upperFirst();
 
 | Input | Output | 
 | ----- | ----- | 
-| YYYY`|`yyyy`|`year`|`年 | 2018
-| MM`|`month`|`月 | 12 |
-| DD`|`date`|`日 | 25 |
+| YYYY&#124;yyyy&#124;year&#124;年 | 2018
+| MM&#124;month&#124;月 | 12 |
+| DD&#124;date&#124;日 | 25 |
 | HH`|`hour`|`时 | 09 |
 | mm`|`minute`|`分 | 10 |
 | ss`|`second`|`秒 | 50 |
