@@ -8,7 +8,7 @@
 
 # How to own me ?
 
-1、Download from npm
+1、Download from [npm](https://www.npmjs.com/package/@zinliao/handybox)
 > npm install -s @zinliao/handybox
 
 2、Sse in your code
