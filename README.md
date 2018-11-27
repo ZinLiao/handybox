@@ -87,10 +87,10 @@ str1.upperFirst();
 | YYYY&#124;yyyy&#124;year&#124;年 | 2018
 | MM&#124;month&#124;月 | 12 |
 | DD&#124;date&#124;日 | 25 |
-| HH`|`hour`|`时 | 09 |
-| mm`|`minute`|`分 | 10 |
-| ss`|`second`|`秒 | 50 |
-| ms`|`millisecond`|`毫秒 | 247 |
+| HH&#124;hour&#124;时 | 09 |
+| mm&#124;minute&#124;分 | 10 |
+| ss&#124;second&#124; | 50 |
+| ms&#124;millisecond&#124;毫秒 | 247 |
 | day | EN: Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday <br> CN: 日, 一, 二, 三, 四, 五, 六 |
 
 ```
