@@ -100,4 +100,9 @@ let time1 = zTime.getMyTime('YYYY-MM-DD HH:mm:ss 星期day', null, 'CN');
 
 // 2018-11-26 21:56:46 星期一
 console.log(time1);
+
+let time2 = zTime.getMyTime('YYYY-MM-DD HH:mm:ss 星期day', 1514736000000, 'CN');
+
+// 2018-01-01 00:00:00 星期一
+console.log(time2);
 ```
