@@ -28,8 +28,11 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
 | API Name | Default Params | optional(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
-| deduplication | arr | keepEmpty(false) | √
-| pushAndShift | item | max(0)| √
+| deduplication | arr | keepEmpty(false) | √ |
+| pushAndShift | item | max(0)| √ |
+| max | - | - | × |
+| min | - | - | × |
+
 
 * deduplication
 
@@ -55,6 +58,19 @@ let a = [1];
 a.pushAndShift(2);
 // [2,3]
 a.pushAndShift(3, 2);
+```
+
+* max & min
+
+```
+let handybox = require('../index);
+
+let a = [5,7,3,9,1,11,0];
+
+// 11
+a.max();
+// 0
+a.min();
 ```
 
 ## zString
@@ -99,10 +115,10 @@ let zTime = require('../index')['zTime'];
 let time1 = zTime.getMyTime('YYYY-MM-DD HH:mm:ss 星期day', null, 'CN');
 
 // 2018-11-26 21:56:46 星期一
-console.log(time1);
+time1;
 
 let time2 = zTime.getMyTime('YYYY-MM-DD HH:mm:ss 星期day', 1514736000000, 'CN');
 
 // 2018-01-01 00:00:00 星期一
-console.log(time2);
+time2;
 ```

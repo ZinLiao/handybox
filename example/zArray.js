@@ -12,3 +12,9 @@ let arr2 = [1];
 console.log(arr2.pushAndShift(2));
 // [2,3]
 console.log(arr2.pushAndShift(3, 2));
+
+let arr3 = [5,10,23,3,28,13,29,32,17,12];
+// 32
+console.log(arr3.max())
+// 3
+console.log(arr3.min())
