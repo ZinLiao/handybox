@@ -11,7 +11,7 @@
 1、Download from [npm](https://www.npmjs.com/package/@zinliao/handybox)
 > npm install -s @zinliao/handybox
 
-2、Sse in your code
+2、Use in your code
 > let handybox = require('@zinliao/handybox');
 
 3、Happy to use all APIs
@@ -89,7 +89,7 @@ str1.upperFirst();
 | DD&#124;date&#124;日 | 25 |
 | HH&#124;hour&#124;时 | 09 |
 | mm&#124;minute&#124;分 | 10 |
-| ss&#124;second&#124; | 50 |
+| ss&#124;second&#124;秒 | 50 |
 | ms&#124;millisecond&#124;毫秒 | 247 |
 | day | EN: Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday <br> CN: 日, 一, 二, 三, 四, 五, 六 |
 
