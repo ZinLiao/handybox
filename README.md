@@ -80,6 +80,8 @@ a.min();
 | -------- | ------ | ----- | ----- |
 | currency | - | - | × | 
 
+* currency
+
 ```
 let handybox = require('../index);
 
@@ -133,6 +135,7 @@ str1.upperFirst();
 | ss&#124;second&#124;秒 | 50 |
 | ms&#124;millisecond&#124;毫秒 | 247 |
 | day | EN: Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday <br> CN: 日, 一, 二, 三, 四, 五, 六 |
+
 
 ```
 let zTime = require('../index')['zTime'];
