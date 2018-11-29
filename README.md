@@ -4,7 +4,7 @@
 
 # What type of function I have ?
 
-  Arrays, String, Time methods that are not Native
+  Arrays, Number, String and Time methods that are not Native
 
 # How to own me ?
 
@@ -21,6 +21,7 @@
 Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
 * [zArray](#zArray)
+* [zNumber](#zNumber)
 * [zString](#zString)
 * [zTime](#zTime)
 
@@ -71,6 +72,30 @@ let a = [5,7,3,9,1,11,0];
 a.max();
 // 0
 a.min();
+```
+
+## zNumber
+
+| API Name | Default Params | optional(default) | Chained call | 
+| -------- | ------ | ----- | ----- |
+| currency | - | - | × | 
+
+```
+let handybox = require('../index);
+
+let _int1 = 123456,
+    _int2 = 123456.789,
+    _int3 = -12345,
+    _int4 = -12345.789;
+
+// 123,456
+_int1.currency();
+// 123,456.789
+_int2.currency();
+// -123,456
+_int3.currency();
+// -123,456.789
+_int4.currency();
 ```
 
 ## zString
