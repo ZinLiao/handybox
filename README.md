@@ -33,7 +33,7 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 | pushAndShift | item | max(0)| √ |
 | max | - | - | × |
 | min | - | - | × |
-| removeSpecItem | index(Number) | item(Number|String) | √ |
+| removeSpecItem | index(Number) | item(Number&#124;String) | √ |
 
 
 * deduplication
