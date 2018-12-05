@@ -29,14 +29,14 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
 | API Name | Default Params | optional(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
-| deduplication | arr | keepEmpty(false) | √ |
+| deduplication | - | keepEmpty(false) | √ |
 | pushAndShift | item | max(0)| √ |
 | max | - | - | × |
 | min | - | - | × |
 | removeSpecItem | index(Number) | item(Number&#124;String) | √ |
 
 
-* deduplication
+* deduplication(keepEmpty)
 
 ```
 let handybox = require('../index');
@@ -49,7 +49,7 @@ a.deduplication();
 a.deduplication(true);
 ```
 
-* pushAndShift
+* pushAndShift(item, max)
 
 ```
 let handybox = require('../index');
@@ -75,7 +75,7 @@ a.max();
 a.min();
 ```
 
-* removeSpecItem
+* removeSpecItem(index, item)
 
 ```
 let handybox = require('../index);
@@ -138,7 +138,7 @@ str1.upperFirst();
 | -------- | ------ | ----- | ----- |
 | getMyTime | - | format(null)<br>timestamp(null)<br>area(EN) | × |
 
-* getMyTime
+* getMyTime(format, timestamp, area)
 
 > format 
 
