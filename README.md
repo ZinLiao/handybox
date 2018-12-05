@@ -33,6 +33,7 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 | pushAndShift | item | max(0)| √ |
 | max | - | - | × |
 | min | - | - | × |
+| removeSpecItem | index(Number) | item(Number|String) | √ |
 
 
 * deduplication
@@ -72,6 +73,20 @@ let a = [5,7,3,9,1,11,0];
 a.max();
 // 0
 a.min();
+```
+
+* removeSpecItem
+
+```
+let handybox = require('../index);
+
+let a = [1, 2, 3],
+    b = [1, 2, 3];
+
+// [1, 3]
+a.removeSpecItem(1);
+// [1, 2]
+a.removeSpecItem(null, 3);
 ```
 
 ## zNumber
