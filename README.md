@@ -120,6 +120,7 @@ _int4.currency();
 | API Name | Default Params | Optional Params(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
 | upperFirst | - | - | × |
+| strBoolToBool | - | - | x |
 
 * upperFirst
 
@@ -130,6 +131,17 @@ let str1 = 'hello world';
 
 // Hello world
 str1.upperFirst();
+```
+
+* strBoolToBool
+
+```
+let handybox = require('../index');
+
+let str2 = 'false';
+
+// boolean
+typeof str2.strBoolToBool();
 ```
 
 ## zTime

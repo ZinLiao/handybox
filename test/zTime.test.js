@@ -2,14 +2,14 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-28 19:27:18 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2018-11-28 19:37:38
+ * @Last Modified time: 2019-01-14 15:34:18
  */
 let zTime = require('../zTime/index');
 let expect = require('chai').expect;
 
 describe('zTime', () => {
   it('getMyTime(YYYY)', () => {
-    expect(zTime.getMyTime('YYYY')).to.be.equal('2018');
+    expect(zTime.getMyTime('YYYY')).to.be.equal(new Date().getFullYear() + '');
   });
 
   it('getMyTime(YYYY-MM-DD, 1514764800000)', () => {
