@@ -9,3 +9,5 @@ let str2 = 'true';
 
 // boolean
 console.log(typeof str2.strBoolToBool());
+// string
+console.log(typeof '1'.strBoolToBool())

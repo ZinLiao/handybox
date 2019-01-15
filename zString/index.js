@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-26 16:44:53 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2019-01-14 15:37:30
+ * @Last Modified time: 2019-01-14 16:01:42
  */
 
 /**
@@ -26,7 +26,7 @@ String.prototype.upperFirst = function () {
  * String Boolean to Boolean
  */
 String.prototype.strBoolToBool = function () {
-  if (typeof this !== 'string') { return this; }
+  if (typeof this !== 'string' || !/^true|false$/.test(this)) { return this; }
 
   return /^true$/.test(this);
 }
