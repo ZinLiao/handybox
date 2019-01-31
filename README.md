@@ -4,7 +4,7 @@
 
 # What type of function I have ?
 
-  Arrays, Number, String and Time methods that are not Native
+  Object, Arrays, Number, String and Time methods that are not Native
 
 # How to own me ?
 
@@ -20,10 +20,38 @@
 
 Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
+* [zObject](#zObject)
 * [zArray](#zArray)
 * [zNumber](#zNumber)
 * [zString](#zString)
 * [zTime](#zTime)
+
+## zObject
+
+| API Name | Default Params | optional(default) | Chained call | 
+| -------- | ------ | ----- | ----- |
+| pickNeedKey | obj(Object)<br>keys(Array) | isKeepKey(false) | x |
+
+* pickNeedKey(obj, keys, isKeepKey)
+
+```
+let zObject = require('../zObject/index');
+
+let obj1 = {
+  a: 'a',
+  b: 'b',
+  c: 'c'
+};
+
+// { a: 'a', c: 'c' }
+zObject.pickNeedKey(obj1, ['a', 'c']);
+
+// { a: 'a' }
+zObject.pickNeedKey(obj1, ['a', 'd']);
+
+// { a: 'a', d: '' }
+zObject.pickNeedKey(obj1, ['a', 'd'], true);
+```
 
 ## zArray
 
