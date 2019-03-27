@@ -31,6 +31,7 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 | API Name | Default Params | optional(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
 | pickNeedKey | obj(Object)<br>keys(Array) | isKeepKey(false) | x |
+| serialization | obj(Object) | x | x |
 
 * pickNeedKey(obj, keys, isKeepKey)
 
@@ -51,6 +52,21 @@ zObject.pickNeedKey(obj1, ['a', 'd']);
 
 // { a: 'a', d: '' }
 zObject.pickNeedKey(obj1, ['a', 'd'], true);
+```
+
+* serialization(obj)
+
+```
+let zObject = require('../zObject/index');
+
+let obj1 = {
+  a: 'a',
+  b: 'b',
+  c: 'c'
+};
+
+// a=a&b=b&c=c
+console.log(zObject.serialization(obj1));
 ```
 
 ## zArray
