@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-26 14:22:04 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2018-12-06 17:47:38
+ * @Last Modified time: 2019-03-27 17:14:26
  */
 
 'use strict';
@@ -22,3 +22,6 @@ exports.zTime = require('./zTime/index');
 
 // zNumber
 require('./zNumber/index');
+
+// zObject
+require('./zObject/index');
