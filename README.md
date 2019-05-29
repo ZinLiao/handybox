@@ -137,7 +137,7 @@ a.removeSpecItem(null, 3);
 
 | API Name | Default Params | optional(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
-| currency | - | - | × | 
+| currency | - | short(false)<br>fixed(2) | × | 
 
 * currency
 
@@ -151,6 +151,10 @@ let _int1 = 123456,
 
 // 123,456
 _int1.currency();
+// 123.46k
+_int1.currency(true);
+// 123.5k
+_int1.currency(true, 1);
 // 123,456.789
 _int2.currency();
 // -123,456
