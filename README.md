@@ -169,6 +169,7 @@ _int4.currency();
 | -------- | ------ | ----- | ----- |
 | upperFirst | - | - | × |
 | strBoolToBool | - | - | x |
+| strNumRangeToArray | - | - | x |
 
 * upperFirst
 
@@ -190,6 +191,17 @@ let str2 = 'false';
 
 // boolean
 typeof str2.strBoolToBool();
+```
+
+* strNumRangeToArray
+
+```
+let handybox = require('../index');
+
+let str3 = '1,2,3-5';
+
+// [ '1', '2', '3', '4', '5' ]
+console.log(str3.strNumRangeToArray())
 ```
 
 ## zTime

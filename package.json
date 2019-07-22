@@ -18,8 +18,8 @@
     "mocha": "^5.2.0"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/ZinLiao/handybox.git"
+    "type": "git",
+    "url": "https://github.com/ZinLiao/handybox.git"
   },
   "homepage": "https://github.com/ZinLiao/handybox"
 }
