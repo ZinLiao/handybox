@@ -4,7 +4,7 @@
 
 # What type of function I have ?
 
-  Object, Arrays, Number, String and Time methods that are not Native
+  Provides APIs not found in native JavaScript, involving Object, Array, Number, String, Time, and common tools, as well as support for use in Node.js
 
 # How to own me ?
 
@@ -25,6 +25,7 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 * [zNumber](#zNumber)
 * [zString](#zString)
 * [zTime](#zTime)
+* [zTool](#zTool)
 
 ## zObject
 
@@ -245,4 +246,51 @@ let time2 = zTime.getMyTime('YYYY-MM-DD HH:mm:ss 星期day', 1514736000000, 'CN'
 
 // 2018-01-01 00:00:00 星期一
 time2;
+```
+
+## zTool
+
+| API Name | Default Params | Optional Params(default) | Chained call | 
+| -------- | ------ | ----- | ----- |
+| debounce | func(Function) <br> delay(Number) |  | × |
+
+* debounce(func, delay = 300)
+
+```
+let handybox = require('../index.js'),
+    zTime = handybox.zTime,
+    zTool = handybox.zTool;
+
+// debounce
+let count = 0, delay = 1000,
+    debounceLog = zTool.debounce(log, delay);
+
+function log() {
+  let now = zTime.getMyTime('HH:mm:ss');
+
+  console.log(`count：${count}`);
+  console.log(`Time：${now}`);
+}
+
+function main() {
+  count < 5 ? setTimeout(_ => {
+    count++;
+    debounceLog();
+    main()
+  }, 0) : console.log('====== Over ======');
+}
+
+console.log('====== Start ======');
+log();
+main();
+```
+
+```
+<!-- all console log like this -->
+====== Start ======
+count：0
+Time：2019-11-02 15:13:24
+====== Over ======
+count：5
+Time：2019-11-02 15:13:25
 ```

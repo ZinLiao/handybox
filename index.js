@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-26 14:22:04 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2019-03-27 17:20:55
+ * @Last Modified time: 2019-11-02 14:21:53
  */
 
 'use strict';
@@ -25,3 +25,6 @@ require('./zNumber/index');
 
 // zObject
 exports.zObject = require('./zObject/index');
+
+// zTool
+exports.zTool = require('./zTool/perf')
