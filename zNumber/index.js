@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-28 20:48:41 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2019-05-29 15:45:38
+ * @Last Modified time: 2019-11-04 20:37:28
  */
 
 'use strict';
@@ -24,6 +24,7 @@ const MAX_VALUE = Math.MAX_VALUE,
  * 2、10000 => 10k
  * 
  * @param {Boolean} short Whether to abbreviate and convert units
+ * @param {Number} fixed decimal, default: 2
  */
 Number.prototype.currency = function(short = false, fixed = 2) {
   if (
@@ -72,4 +73,24 @@ Number.prototype.currency = function(short = false, fixed = 2) {
   }
 
   return n;
+}
+
+/**
+ * calc the midian of two numbers
+ * 
+ * @param {Number} target number of target
+ * @param {Number} fixed decimal, default: -1, retain result
+ */
+Number.prototype.midian = function (target, fixed = -1) {
+  if (typeof target !== 'number' || this === target) {
+    return 0;
+  }
+
+  let result = this - (this - target) / 2;
+
+  if (fixed > -1) {
+    result = result.toFixed(fixed);
+  }
+
+  return result - 0;
 }

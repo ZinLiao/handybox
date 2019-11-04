@@ -139,8 +139,9 @@ a.removeSpecItem(null, 3);
 | API Name | Default Params | optional(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
 | currency | - | short(false)<br>fixed(2) | × | 
+| midian | target(Number) | fixed(-1) | × | 
 
-* currency
+* currency(short, fixed)
 
 ```
 let handybox = require('../index);
@@ -162,6 +163,21 @@ _int2.currency();
 _int3.currency();
 // -123,456.789
 _int4.currency();
+```
+
+* midian(target)
+
+```
+let handybox = require('../index);
+
+let start = 10, end = -5;
+
+// 2.5
+start.midian(end)
+// 3
+start.midian(end, 0)
+// 0
+start.midian('-5')
 ```
 
 ## zString
