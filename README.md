@@ -20,12 +20,14 @@
 
 Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
-* [zObject](#zObject)
-* [zArray](#zArray)
-* [zNumber](#zNumber)
-* [zString](#zString)
-* [zTime](#zTime)
-* [zTool](#zTool)
+| [zObject](#zObject) | [zArray](#zArray) | [zNumber](#zNumber) | [zString](#zString) | [zTime](#zTime) | [zTool](#zTool) | 
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| pickNeedKey | deduplication | currency | upperFirst | getMyTime | debounce |
+| serialization | pushAndShift | midian | strBoolToBool | - | - |
+| - | max | - | strNumRangeToArray | - | - |
+| - | min| - | - | - | - |
+| - | removeSpecItem | - | - | - | - |
+| - | in | - | - | - | - |
 
 ## zObject
 
@@ -79,6 +81,7 @@ console.log(zObject.serialization(obj1));
 | max | - | - | × |
 | min | - | - | × |
 | removeSpecItem | index(Number) | item(Number&#124;String) | √ |
+| in | item(Any) | isBackIndex(false) | x |
 
 
 * deduplication(keepEmpty)
@@ -132,6 +135,24 @@ let a = [1, 2, 3],
 a.removeSpecItem(1);
 // [1, 2]
 a.removeSpecItem(null, 3);
+```
+
+* in(item, isBackInde)
+
+```
+let handy = require('../index);
+
+let a = [1, '2', 3];
+
+// false
+console.log(a.in(2));
+// false
+console.log(a.in(4));
+// true
+console.log(a.in('2'));
+// 1
+console.log(a.in('2', true));
+
 ```
 
 ## zNumber

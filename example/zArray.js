@@ -26,3 +26,13 @@ let arr4 = [1, 2, 3],
 console.log(arr4.removeSpecItem(1));
 // [1,2]
 console.log(arr5.removeSpecItem(null, 3));
+
+let arr6 = [1, 2, 3],
+    arr7 = ['a', 'b', 'c'];
+
+console.log(arr6.in(4));
+console.log(arr6.in(2));
+console.log(arr6.in(2, false));
+console.log(arr7.in('d'));
+console.log(arr7.in('c'));
+console.log(arr7.in('c', false));

@@ -2,7 +2,12 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2019-11-02 11:34:01 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2019-11-02 15:09:03
+ * @Last Modified time: 2019-11-29 11:29:33
+ */
+
+/**
+ * LIST:
+ *    1、debounce
  */
 
 'use strict';

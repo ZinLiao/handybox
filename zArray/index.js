@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-26 14:33:18 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2018-12-05 21:41:24
+ * @Last Modified time: 2019-11-29 11:53:02
  */
 
 /**
@@ -12,6 +12,7 @@
  *    3、max
  *    4、min
  *    5、removeSpecItem
+ *    6、in
  */
 
 'use strict';
@@ -54,7 +55,7 @@ Array.prototype.pushAndShift = function (item, max = 0) {
  * return the max of number in an array after filter not a number item
  */
 Array.prototype.max = function() {
-  if (!Array.isArray(this) || this.length <= 0) { return false}
+  if (!Array.isArray(this) || this.length <= 0) { return false }
 
   return Math.max.apply(null, this.filter(val => typeof val == 'number'));
 }
@@ -63,7 +64,7 @@ Array.prototype.max = function() {
  * return the min of number in an array after filter not a number item
  */
 Array.prototype.min = function() {
-  if (!Array.isArray(this) || this.length <= 0) { return false}
+  if (!Array.isArray(this) || this.length <= 0) { return false }
 
   return Math.min.apply(null, this.filter(val => typeof val == 'number'));
 }
@@ -89,4 +90,26 @@ Array.prototype.removeSpecItem = function(index, item) {
   }
 
   return this;
+}
+
+/**
+ * determines whether an element is in an array
+ * and return the array index
+ * 
+ * @param {Any} item any
+ * @param {Boolean} isBackIndex choose to return boolean or arry index
+ */
+Array.prototype.in = function (item, isBackIndex = false) {
+  let index = -1;
+
+  if (!item || this.length <= 0) { return isBackIndex ? index : false }
+
+  for (let i = 0, l = this.length; i < l; i++) {
+    if (this[i] === item) { 
+      index = i;
+      break;
+    }
+  }
+
+  return isBackIndex ? index : (index > -1 ? true : false);
 }

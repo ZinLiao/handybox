@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-28 17:26:18 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2019-01-31 16:52:39
+ * @Last Modified time: 2019-11-29 12:00:01
  */
 let zArray = require('../zArray/index');
 let expect = require('chai').expect;
@@ -38,5 +38,17 @@ describe('zArray', () => {
 
   it('removeSpecItem(null, index)', () => {
     expect([1,2,3].removeSpecItem(null, 2).join(',')).to.be.equal('1,3');
+  });
+
+  it('in(item)', () => {
+    expect([1,'2',3].in(2)).to.be.equal(false);
+  });
+
+  it('in(item)', () => {
+    expect([1,'2',3].in('2')).to.be.equal(true);
+  });
+
+  it('in(item, isBackIndex)', () => {
+    expect([1,'2',3].in('2', true)).to.be.equal(1);
   });
 });
