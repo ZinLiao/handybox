@@ -20,14 +20,14 @@
 
 Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
-| [zObject](#zObject) | [zArray](#zArray) | [zNumber](#zNumber) | [zString](#zString) | [zTime](#zTime) | [zTool](#zTool) | 
-| ----- | ----- | ----- | ----- | ----- | ----- |
-| pickNeedKey | deduplication | currency | upperFirst | getMyTime | debounce |
-| serialization | pushAndShift | midian | strBoolToBool | - | - |
-| - | max | - | strNumRangeToArray | - | - |
-| - | min| - | - | - | - |
-| - | removeSpecItem | - | - | - | - |
-| - | in | - | - | - | - |
+| [zObject](#zObject) | [zArray](#zArray) | [zNumber](#zNumber) | [zString](#zString) | [zTime](#zTime) | [zTool](#zTool) | [zData](#zData) |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| pickNeedKey | deduplication | currency | upperFirst | getMyTime | debounce | Queue |
+| serialization | pushAndShift | midian | strBoolToBool | - | dataType | - |
+| - | max | - | strNumRangeToArray | - | - | - |
+| - | min| - | - | - | - | - |
+| - | removeSpecItem | - | - | - | - | - |
+| - | in | - | - | - | - | - |
 
 ## zObject
 
@@ -38,7 +38,7 @@ Online: [Github - handybox](https://github.com/ZinLiao/handybox)
 
 * pickNeedKey(obj, keys, isKeepKey)
 
-```
+``` javascript
 let zObject = require('../zObject/index');
 
 let obj1 = {
@@ -59,7 +59,7 @@ zObject.pickNeedKey(obj1, ['a', 'd'], true);
 
 * serialization(obj)
 
-```
+``` javascript
 let zObject = require('../zObject/index');
 
 let obj1 = {
@@ -86,7 +86,7 @@ console.log(zObject.serialization(obj1));
 
 * deduplication(keepEmpty)
 
-```
+``` javascript
 let handybox = require('../index');
 
 let a = [1,3,5,'',3,1];
@@ -99,7 +99,7 @@ a.deduplication(true);
 
 * pushAndShift(item, max)
 
-```
+``` javascript
 let handybox = require('../index');
 
 let a = [1];
@@ -112,8 +112,8 @@ a.pushAndShift(3, 2);
 
 * max & min
 
-```
-let handybox = require('../index);
+``` javascript
+let handybox = require('../index');
 
 let a = [5,7,3,9,1,11,0];
 
@@ -125,8 +125,8 @@ a.min();
 
 * removeSpecItem(index, item)
 
-```
-let handybox = require('../index);
+``` javascript
+let handybox = require('../index');
 
 let a = [1, 2, 3],
     b = [1, 2, 3];
@@ -139,8 +139,8 @@ a.removeSpecItem(null, 3);
 
 * in(item, isBackInde)
 
-```
-let handy = require('../index);
+```javascript
+let handy = require('../index');
 
 let a = [1, '2', 3];
 
@@ -164,8 +164,8 @@ console.log(a.in('2', true));
 
 * currency(short, fixed)
 
-```
-let handybox = require('../index);
+``` javascript
+let handybox = require('../index');
 
 let _int1 = 123456,
     _int2 = 123456.789,
@@ -188,8 +188,8 @@ _int4.currency();
 
 * midian(target)
 
-```
-let handybox = require('../index);
+``` javascript
+let handybox = require('../index');
 
 let start = 10, end = -5;
 
@@ -211,7 +211,7 @@ start.midian('-5')
 
 * upperFirst
 
-```
+``` javascript
 let handybox = require('../index');
 
 let str1 = 'hello world';
@@ -222,7 +222,7 @@ str1.upperFirst();
 
 * strBoolToBool
 
-```
+``` javascript
 let handybox = require('../index');
 
 let str2 = 'false';
@@ -233,7 +233,7 @@ typeof str2.strBoolToBool();
 
 * strNumRangeToArray
 
-```
+``` javascript
 let handybox = require('../index');
 
 let str3 = '1,2,3-5';
@@ -271,7 +271,7 @@ console.log(str3.strNumRangeToArray())
 | CN | × |
 
 
-```
+``` javascript
 let zTime = require('../index')['zTime'];
 
 let time1 = zTime.getMyTime('YYYY-MM-DD HH:mm:ss 星期day', null, 'CN');
@@ -290,10 +290,11 @@ time2;
 | API Name | Default Params | Optional Params(default) | Chained call | 
 | -------- | ------ | ----- | ----- |
 | debounce | func(Function) <br> delay(Number) |  | × |
+| dataType | data(Any) | isWitchType(null) | x |
 
 * debounce(func, delay = 300)
 
-```
+``` javascript
 let handybox = require('../index.js'),
     zTime = handybox.zTime,
     zTool = handybox.zTool;
@@ -322,7 +323,7 @@ log();
 main();
 ```
 
-```
+``` javascript
 <!-- all console log like this -->
 ====== Start ======
 count：0
@@ -330,4 +331,53 @@ Time：2019-11-02 15:13:24
 ====== Over ======
 count：5
 Time：2019-11-02 15:13:25
+```
+
+* dataType(data, isWhichType = null)
+
+``` javascript
+let handybox = require('../../index'),
+    zTool = handybox.zTool;
+
+console.log(zTool.dataType('String'));                  // String
+console.log(zTool.dataType(123456789));                 // Number
+console.log(zTool.dataType(false));                     // Boolean
+console.log(zTool.dataType(undefined));                 // Undefined
+console.log(zTool.dataType(null));                      // Null
+console.log(zTool.dataType(BigInt(100000000000000)));   // BigInt
+console.log(zTool.dataType(Symbol('SYMBOL')));          // Symbol
+console.log(zTool.dataType({}));                        // Object
+console.log(zTool.dataType(new Array(10)));             // Array
+console.log(zTool.dataType(function(){}));              // Function
+```
+
+## zData
+
+| API Name | Default Params | Optional Params(default) | Chained call | 
+| -------- | ------ | ----- | ----- |
+| Queue | - | - | - |
+
+* Queue
+
+``` javascript
+let handybox = require('../../index'),
+    Queue = handybox.zData.Queue;
+
+let queue = new Queue();
+
+queue.enqueue(1);                   // [1]
+queue.enqueue(2);                   // [1,2]
+queue.enqueue(3);                   // [1,2,3]
+queue.dequeue();                    // [2,3]
+console.log(queue.isEmpty())        // false
+console.log(queue.first())          // 2
+queue.enqueue(4);                   // [2,3,4]
+queue.enqueue(5);                   // [2,3,4,5]
+queue.enqueue(6);                   // [2,3,4,5,6]
+queue.dequeue();                    // [3,4,5,6]
+console.log(queue.last())           // 6
+queue.enqueue(7);                   // [3,4,5,6,7]
+console.log(queue.toString());      // 3,4,5,6,7
+queue.clear();                      // []
+console.log(queue.toString(null));  // []
 ```

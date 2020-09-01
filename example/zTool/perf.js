@@ -1,4 +1,4 @@
-let handybox = require('../index.js'),
+let handybox = require('../../index.js'),
     zTime = handybox.zTime,
     zTool = handybox.zTool;
 
