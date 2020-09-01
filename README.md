@@ -353,9 +353,9 @@ console.log(zTool.dataType(function(){}));              // Function
 
 ## zData
 
-| API Name | Default Params | Optional Params(default) | Chained call | 
-| -------- | ------ | ----- | ----- |
-| Queue | - | - | - |
+| Data Strutures | Methods | 
+| -------- | ------ |
+| Queue | isEmpty() <br/> first() <br/> last() <br/> length() <br/> enqueue(el) <br/> dequeue() <br/> toString() <br/> clear()  |
 
 * Queue
 
@@ -370,6 +370,7 @@ queue.enqueue(2);                   // [1,2]
 queue.enqueue(3);                   // [1,2,3]
 queue.dequeue();                    // [2,3]
 console.log(queue.isEmpty())        // false
+console.log(queue.length())         // 2
 console.log(queue.first())          // 2
 queue.enqueue(4);                   // [2,3,4]
 queue.enqueue(5);                   // [2,3,4,5]
