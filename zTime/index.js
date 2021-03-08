@@ -2,7 +2,7 @@
  * @Author: Zin, LiaoZhiYong 
  * @Date: 2018-11-26 17:25:30 
  * @Last Modified by: Zin, LiaoZhiYong
- * @Last Modified time: 2018-11-27 16:04:23
+ * @Last Modified time: 2021-03-08 15:15:02
  */
 
 'use strict';
@@ -23,7 +23,7 @@ const TEXT = {
     day: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
   },
   CN: {
-    day: ['日', '一', '二', '三', '四', '五', '六']
+    day: ['天', '一', '二', '三', '四', '五', '六']
   }
 }
 
